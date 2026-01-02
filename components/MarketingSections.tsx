@@ -347,7 +347,7 @@ export const WhenToReplaceSection: React.FC<SectionProps> = ({ t }) => (
       </div>
       <div className="rounded-2xl overflow-hidden">
         <img
-          src="/images/Queens Auto Services - Auto Repair - 004.webp"
+          src="/images/tire-wear.png"
           alt="Uneven tire wear comparison"
           className="w-full transition-transform duration-700 hover:scale-110"
           onError={(e) =>
@@ -586,7 +586,7 @@ export const WhyImportantSection: React.FC<SectionProps> = ({ t }) => (
       </div>
       <div className="rounded-2xl overflow-hidden shadow-lg mt-8 md:mt-0">
         <img
-          src="/images/Queens Auto Services - Auto Repair - 004.webp"
+          src="/images/Queens Auto Services - Auto Repair -  004.webp"
           alt="Poor Wheel Alignment"
           className="w-full transition-transform duration-700 hover:scale-110"
           onError={(e) =>
@@ -744,7 +744,7 @@ export const AboutSection: React.FC<SectionProps> = ({ t }) => (
     <div>
       <div className="rounded-2xl overflow-hidden shadow-lg w-full">
         <img
-          src="/images/Shop-Front-Desk.webp"
+          src="/images/Shop-Front-Desk Algonquin.webp"
           alt="Queens Auto Shop"
           className="w-full transition-transform duration-700 hover:scale-110"
           onError={(e) =>
@@ -762,7 +762,7 @@ export const ParallaxSection: React.FC<SectionProps> = ({ t }) => (
   <section
     className="mt-16 parallax rounded-2xl shadow-2xl py-24 px-8 max-w-8xl mx-auto"
     style={{
-      backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('/images/Shop-Front-Desk.webp')`,
+      backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('/images/Shop-Front-Desk%20Algonquin.webp')`,
     }}
   >
     <div className="relative z-10 text-center max-w-3xl mx-auto">
