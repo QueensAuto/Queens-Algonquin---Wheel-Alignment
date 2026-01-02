@@ -34,7 +34,7 @@ export const HeroSection: React.FC<SectionProps> = ({ t }) => {
                 <img
                   src="/images/Wheel Alignment LP - 002.webp"
                   alt="Precision Wheel Alignment"
-                  className="w-full h-auto transition-transform duration-700 hover:scale-110"
+                  className="w-full aspect-[3/2] object-cover transition-transform duration-700 hover:scale-110"
                   onError={(e) =>
                   ((e.target as HTMLImageElement).src =
                     "https://placehold.co/600x400/1e293b/ffffff?text=Alignment+Service")
