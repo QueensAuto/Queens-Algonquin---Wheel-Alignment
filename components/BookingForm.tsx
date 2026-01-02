@@ -14,7 +14,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ t, lang }) => {
   const [formData, setFormData] = useState(() => {
     const saved = localStorage.getItem('bookingFormData');
     const defaultData = {
-      symptom: 'Brake Service Request',
+      symptom: 'Wheel Alignment Request',
       firstName: '',
       lastName: '',
       email: '',
@@ -218,7 +218,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ t, lang }) => {
         }
       },
       lead_type: 'generate_lead',
-      page_variant: 'brakes_001_react',
+      page_variant: 'alignment_001_react',
       user_language: lang
     };
 
@@ -251,7 +251,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ t, lang }) => {
       ga_client_id: (window as any).ga?.getAll?.[0]?.get('clientId') || null,
       fbc: getParam('fbc') || null,
       referrer: document.referrer || null,
-      pageVariant: "brakes_001_react",
+      pageVariant: "alignment_001_react",
       userLanguage: lang,
       event_id: eventId,
       lead_type: "generate_lead"

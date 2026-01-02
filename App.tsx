@@ -13,7 +13,7 @@ import {
   HeroSection,
   PromiseSection,
   WhenToReplaceSection,
-  ExpertBrakeSection,
+  ExpertAlignmentSection,
   WhyImportantSection,
   TrustSignalsSection,
   AboutSection,
@@ -57,12 +57,12 @@ const App: React.FC = () => {
 
   return (
     <div className="relative z-10 text-slate-300">
-       {/* Background Elements */}
+      {/* Background Elements */}
       <div className="background-wrapper">
-         <div className="background-top-gradient"></div>
-         <div className="background-glow-1"></div>
-         <div className="background-glow-2"></div>
-         <div className="background-glow-center"></div>
+        <div className="background-top-gradient"></div>
+        <div className="background-glow-1"></div>
+        <div className="background-glow-2"></div>
+        <div className="background-glow-center"></div>
       </div>
 
       <div className="relative z-10 max-w-[1200px] mx-auto">
@@ -78,7 +78,7 @@ const App: React.FC = () => {
 
         <WhenToReplaceSection t={t} />
 
-        <ExpertBrakeSection t={t} />
+        <ExpertAlignmentSection t={t} />
 
         <WhyImportantSection t={t} />
 

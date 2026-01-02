@@ -32,12 +32,12 @@ export const HeroSection: React.FC<SectionProps> = ({ t }) => {
             <div className="glass-card relative rounded-2xl p-3 shadow-xl">
               <div className="bg-gray-900 rounded-xl overflow-hidden">
                 <img
-                  src="/images/Queens-Auto-Brake-Repair-Before-and-After-0001.webp"
-                  alt="New Brakes"
+                  src="/images/Wheel Alignment LP - 002.webp"
+                  alt="Precision Wheel Alignment"
                   className="w-full h-auto transition-transform duration-700 hover:scale-110"
                   onError={(e) =>
                   ((e.target as HTMLImageElement).src =
-                    "https://placehold.co/600x400/1e293b/ffffff?text=Brake+Service")
+                    "https://placehold.co/600x400/1e293b/ffffff?text=Alignment+Service")
                   }
                 />
               </div>
@@ -50,7 +50,7 @@ export const HeroSection: React.FC<SectionProps> = ({ t }) => {
             <ul className="space-y-3 mb-8 text-slate-300">
               <li className="flex items-start gap-3 text-lg">
                 <span className="text-cyan-400 text-2xl flex-shrink-0">✅</span>
-                <span>{t("bulletBrakeService")}</span>
+                <span>{t("bulletAlignmentService")}</span>
               </li>
               {[1, 2, 3, 4].map((num) => (
                 <li
@@ -347,9 +347,13 @@ export const WhenToReplaceSection: React.FC<SectionProps> = ({ t }) => (
       </div>
       <div className="rounded-2xl overflow-hidden">
         <img
-          src="/images/Worned-out-brake-pads-vs-New-pads.webp"
-          alt="Worn out brake pads vs new brake pads comparison"
+          src="/images/Queens Auto Services - Auto Repair - 004.webp"
+          alt="Uneven tire wear comparison"
           className="w-full transition-transform duration-700 hover:scale-110"
+          onError={(e) =>
+          ((e.target as HTMLImageElement).src =
+            "https://placehold.co/600x400/1e293b/ffffff?text=Alignment+Signs")
+          }
         />
       </div>
     </div>
@@ -423,7 +427,7 @@ const FlashlightCard: React.FC<{
   );
 };
 
-export const ExpertBrakeSection: React.FC<SectionProps> = ({ t }) => {
+export const ExpertAlignmentSection: React.FC<SectionProps> = ({ t }) => {
   const [count, setCount] = useState(0);
   const target = 25000;
   const ref = useRef<HTMLHeadingElement>(null);
@@ -458,8 +462,8 @@ export const ExpertBrakeSection: React.FC<SectionProps> = ({ t }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-12">
         <div className="rounded-2xl overflow-hidden shadow-lg">
           <img
-            src="/images/disc-brake-service-mechanic-elgin-il.webp"
-            alt="Brake repair"
+            src="/images/Queens Auto Services - Auto Repair - 004.webp"
+            alt="Wheel Alignment"
             className="w-full transition-transform duration-700 hover:scale-110"
           />
         </div>
@@ -474,7 +478,7 @@ export const ExpertBrakeSection: React.FC<SectionProps> = ({ t }) => {
               {" "}
               <path d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z" />{" "}
             </svg>
-            <span>{t("brakesServiced")}</span>
+            <span>{t("alignmentsPerformed")}</span>
           </p>
           <h3 className="text-3xl font-medium text-white mb-4">
             {t("expertRepairTitle")}
@@ -582,9 +586,13 @@ export const WhyImportantSection: React.FC<SectionProps> = ({ t }) => (
       </div>
       <div className="rounded-2xl overflow-hidden shadow-lg mt-8 md:mt-0">
         <img
-          src="/images/damaged-brake-rotor-elgin-mechanic.webp"
-          alt="Worn brakes"
+          src="/images/Queens Auto Services - Auto Repair - 004.webp"
+          alt="Poor Wheel Alignment"
           className="w-full transition-transform duration-700 hover:scale-110"
+          onError={(e) =>
+          ((e.target as HTMLImageElement).src =
+            "https://placehold.co/600x400/1e293b/ffffff?text=Unsafe+Handling")
+          }
         />
       </div>
     </div>
