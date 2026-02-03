@@ -10,35 +10,18 @@ interface BookingFormProps {
 const BookingForm: React.FC<BookingFormProps> = ({ t, lang }) => {
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  // Initialize state with localStorage values if they exist
-  const [formData, setFormData] = useState(() => {
-    const saved = localStorage.getItem('bookingFormData');
-    const defaultData = {
-      symptom: 'Wheel Alignment Request',
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      carYear: '',
-      carMake: '',
-      carModel: '',
-      date: '',
-      time: ''
-    };
-    if (saved) {
-      try {
-        return { ...defaultData, ...JSON.parse(saved) };
-      } catch (e) {
-        return defaultData;
-      }
-    }
-    return defaultData;
+  const [formData, setFormData] = useState({
+    symptom: 'Wheel Alignment Request',
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    carYear: '',
+    carMake: '',
+    carModel: '',
+    date: '',
+    time: ''
   });
-
-  // Save to localStorage whenever formData changes
-  useEffect(() => {
-    localStorage.setItem('bookingFormData', JSON.stringify(formData));
-  }, [formData]);
 
   // Validation State
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
