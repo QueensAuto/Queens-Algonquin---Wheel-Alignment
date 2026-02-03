@@ -82,9 +82,6 @@ const BookingForm: React.FC<BookingFormProps> = ({ t, lang }) => {
     if (!formData.carModel.trim()) newErrors.carModel = t('requiredField');
 
     setErrors(newErrors);
-    if (Object.keys(newErrors).length > 0) {
-      console.log('Validation failed:', newErrors);
-    }
     return Object.keys(newErrors).length === 0;
   };
 
@@ -247,8 +244,6 @@ const BookingForm: React.FC<BookingFormProps> = ({ t, lang }) => {
 
     // Use the production webhook URL
     const FINAL_WEBHOOK_URL = WEBHOOK_URL;
-    console.log('Attempting submission...', { url: FINAL_WEBHOOK_URL, payload });
-
     try {
       const response = await fetch(FINAL_WEBHOOK_URL, {
         method: 'POST',
@@ -256,9 +251,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ t, lang }) => {
         body: JSON.stringify(payload),
       });
 
-      console.log('Webhook response status:', response.status);
       const responseData = await response.json().catch(() => ({}));
-      console.log('Webhook response data:', responseData);
 
       // Redirect Logic
       const state = {
@@ -279,8 +272,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ t, lang }) => {
       window.dispatchEvent(new PopStateEvent('popstate'));
 
     } catch (error) {
-      console.error('Webhook fetch error:', error);
-      console.error('Submission error', error);
+      console.error('Submission error:', error);
       // Fallback redirect
       const state = {
         name: formData.firstName,
